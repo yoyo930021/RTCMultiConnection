@@ -89,7 +89,7 @@ connection.maxRelayLimitPerUser = 1;
 connection.autoCloseEntireSession = true;
 
 // by default, socket.io server is assumed to be deployed on your own URL
-connection.socketURL = '/';
+connection.socketURL = 'https://rtcmulticonnection.herokuapp.com/';
 
 // comment-out below line if you do not have your own socket.io server
 // connection.socketURL = 'https://rtcmulticonnection.herokuapp.com:443/';
@@ -252,8 +252,7 @@ document.getElementById('open-or-join').onclick = function() {
     connection.extra.broadcastId = broadcastId;
 
     connection.session = {
-        audio: true,
-        video: true,
+        screen: true,
         oneway: true
     };
 
